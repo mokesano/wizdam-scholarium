@@ -1,0 +1,212 @@
+# =============================================================================
+# OJS (Open Journal Systems) - .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# KONFIGURASI & DATABASE (SENSITIVE - JANGAN UPLOAD!)
+# -----------------------------------------------------------------------------
+config.inc.php
+config.*.php
+*.sql
+*.sql.gz
+*.sql.bz2
+dump*.sql
+backup*.sql
+database.sql
+
+# -----------------------------------------------------------------------------
+# FILE UPLOAD & USER DATA
+# -----------------------------------------------------------------------------
+public/*
+!public/.htaccess
+!public/index.php
+files/*
+!files/.htaccess
+files/articles/*
+files/issue_galleys/*
+files/journals/*
+files/public/*
+files/temp/*
+files/users/*
+
+# -----------------------------------------------------------------------------
+# CACHE & TEMPORARY FILES
+# -----------------------------------------------------------------------------
+cache/*
+!cache/.htaccess
+cache/t_compile/*
+cache/t_cache/*
+cache/_db/*
+templates_c/*
+*.tmp
+*.temp
+*.log
+logs/*
+
+# -----------------------------------------------------------------------------
+# SYSTEM & DEPENDENCIES
+# -----------------------------------------------------------------------------
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+yarn.lock
+
+# -----------------------------------------------------------------------------
+# IDE & EDITOR
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# -----------------------------------------------------------------------------
+# BACKUP FILES
+# -----------------------------------------------------------------------------
+*~
+*.bak
+*.backup
+*.old
+*.orig
+
+# -----------------------------------------------------------------------------
+# ENVIRONMENT
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# OS X Thumbnails
+._*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+#-------------------------
+# Environment Files
+#-------------------------
+# These should never be under version control,
+# as it poses a security risk.
+.env
+.vagrant
+Vagrantfile
+/user_guide_src/venv/
+.python-version
+/user_guide_src/.python-version
+
+#-------------------------
+# Temporary Files
+#-------------------------
+/writable/cache/*
+!/writable/cache/index.html
+
+/writable/logs/*
+!/writable/logs/index.html
+
+/writable/session/*
+!/writable/session/index.html
+
+/writable/uploads/*
+!/writable/uploads/index.html
+
+/writable/debugbar/*
+!/writable/debugbar/index.html
+
+/writable/**/*.db
+/writable/**/*.sqlite
+
+php_errors.log
+
+#-------------------------
+# User Guide Temp Files
+#-------------------------
+/user_guide_src/build/*
+
+#-------------------------
+# Test Files
+#-------------------------
+/tests/coverage*
+
+# Don't save phpunit under version control.
+/phpunit
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+composer.lock
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
+
+# Modules Testing
+_modules/*
+
+# phpenv local config
+.php-version
+
+# Jetbrains editors (PHPStorm, etc)
+.idea/
+*.iml
+
+# Netbeans
+/nbproject/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+/.nb-gradle/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+.phpintel
+/api/
+
+# Visual Studio Code
+.vscode/
+
+/results/
+/phpunit.xml
+
+/.php-cs-fixer.php
