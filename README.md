@@ -1,140 +1,120 @@
-# 📚 OJS 2.4.8.5 Wizdam Edition
+# Scholarium
+### The Modern Scholarly Publishing Suite
 
-[![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://php.net)
-[![License](https://img.shields.io/badge/License-GPL%20v3-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-v1.0.0-orange.svg)](https://github.com/Rochmady/ojs-2485-wizdamid-edition/releases)
-[![Warnings](https://img.shields.io/badge/PHP%20Warnings-0-brightgreen.svg)](#zero-warning-achievement)
+<div align="center">
+  <img src="https://via.placeholder.com/800x200/0d1117/58a6ff?text=SCHOLARIUM" alt="Scholarium Banner" />
+</div>
 
-## 🎯 Zero-Warning, Production-Ready OJS for Modern PHP
+<div align="center">
 
-**OJS 2.4.8.5 WizdamID Edition** is a completely refactored version of Open Journal Systems 2.4.8.5, engineered for 100% PHP 7.4+ compatibility with **zero warnings**.
+  ![PHP Version](https://img.shields.io/badge/PHP-8.4-blue?style=for-the-badge&logo=php)
+  ![Build Status](https://img.shields.io/badge/build-stable-brightgreen?style=for-the-badge)
+  ![License](https://img.shields.io/badge/license-GPL%20v3-yellow?style=for-the-badge)
 
-## 🚀 Quick Download & Installation
+</div>
 
-### 📦 Direct Download
-👉 **[Download Latest Release (v1.0.0)](https://github.com/Rochmady/ojs-2485-wizdamid-edition/releases/latest)**
+<br/>
 
-### 🛠️ Installation Steps
-1. **Download** the `ojs-2485-wizdamid-edition.tar.gz` from releases
-2. **Extract** to your web directory:
-   ```bash
-   tar -xzf ojs-2485-wizdamid-edition.tar.gz
-   ```
-3. **Set proper permissions:**
-   ```bash
-   chmod -R 755 ojs-2485-wizdamid-edition/
-   chmod -R 777 ojs-2485-wizdamid-edition/cache/
-   chmod -R 777 ojs-2485-wizdamid-edition/files/
-   ```
-4. **Visit installation page:**
-   ```
-   http://yourdomain.com/ojs-2485-wizdamid-edition/install
-   ```
+**Scholarium** adalah platform manajemen editorial dan penerbitan jurnal ilmiah modern yang menjembatani kesenjangan antara alur kerja akademik tradisional dan tuntutan digital masa kini.
 
-## ✨ Key Features
-
-- **🚫 Zero PHP Warnings:** Complete elimination of all 51 PHP 7.4 compatibility warnings
-- **⚡ Production Ready:** Thoroughly tested and optimized for modern hosting environments
-- **🎨 Modern Interface:** Enhanced installation UI with futuristic design
-- **🛡️ Enhanced Stability:** Improved error handling and defensive programming
-- **📱 Responsive Design:** Mobile-optimized interface components
-- **🔧 Easy Installation:** Professional installation wizard with real-time monitoring
-
-## 📊 Zero-Warning Achievement
-
-| Component | Original OJS 2.4.8.5 | WizdamID Edition | Status |
-|-----------|----------------------|------------------|---------|
-| **Core Classes** | 15 warnings | 0 warnings | ✅ **Fixed** |
-| **Plugin System** | 25 warnings | 0 warnings | ✅ **Fixed** |
-| **Block Plugins** | 11 warnings | 0 warnings | ✅ **Fixed** |
-| **Form Handlers** | 6 warnings | 0 warnings | ✅ **Fixed** |
-| **Total** | **51 warnings** | **0 warnings** | **✅ 100% Eliminated** |
-
-## 🛠️ System Requirements
-
-- **PHP:** 7.4+ (fully tested up to PHP 8.2)
-- **Database:** MySQL 5.7+ / MariaDB 10.2+ / PostgreSQL 9.5+
-- **Web Server:** Apache 2.4+ / Nginx 1.14+
-- **Memory:** 256MB+ PHP memory limit
-- **Storage:** 500MB+ disk space
-
-## 🎨 What's New in WizdamID Edition
-
-### Enhanced Installation Experience
-- **Modern UI:** Futuristic, responsive installation interface
-- **Real-time Monitoring:** Progress tracking and error detection
-- **Professional Design:** Clean, intuitive user experience
-- **Zero Warnings:** Completely clean installation process
-
-### Code Quality Improvements
-- **Method Signature Standardization:** All plugins updated for PHP 7.4+
-- **Enhanced Error Handling:** Defensive programming practices
-- **Header Output Protection:** Prevents "headers already sent" errors
-- **Reference Parameter Modernization:** Updated parameter passing patterns
-
-### Performance Optimizations
-- **Zero Warning Overhead:** No PHP warning processing overhead
-- **Improved Memory Usage:** Optimized code patterns
-- **Faster Page Loads:** Enhanced rendering performance
-- **Database Efficiency:** Optimized query patterns
-
-## 🏆 Success Stories
-
-> *"OJS 2.4.8.5 WizdamID Edition eliminated all our PHP warnings and provided a smooth installation experience. Highly recommended for modern hosting environments."*  
-> — **University Library Administrator**
-
-> *"The zero-warning guarantee and enhanced stability made our journal platform migration seamless. Professional quality work."*  
-> — **Academic Publishing Platform**
-
-## 🔧 Technical Details
-
-### Fixed Issues
-- ✅ **Plugin Method Signatures:** Updated 32+ plugin files for compatibility
-- ✅ **Form Class Methods:** Modernized display() and execute() methods
-- ✅ **Header Output Issues:** Added defensive header sending checks
-- ✅ **Reference Parameters:** Updated deprecated parameter patterns
-- ✅ **Continue Statements:** Fixed switch statement compatibility
-- ✅ **Block Plugin Methods:** Standardized getContents() signatures
-
-### Maintained Compatibility
-- ✅ **Full OJS Functionality:** All original features preserved
-- ✅ **Database Schema:** No changes required
-- ✅ **Configuration Files:** Existing configs remain valid
-- ✅ **Plugin Ecosystem:** All original plugins continue to work
-- ✅ **Theme Compatibility:** Existing themes remain functional
-
-## 📚 Documentation & Support
-
-- **📖 Installation Guide:** Detailed setup instructions included
-- **🔧 Troubleshooting:** Common issues and solutions documented
-- **🆘 Issues:** [GitHub Issues](https://github.com/Rochmady/ojs-2485-wizdamid-edition/issues) for bug reports
-- **💬 Discussions:** [GitHub Discussions](https://github.com/Rochmady/ojs-2485-wizdamid-edition/discussions) for questions
-- **🌐 Community:** [OJS Community Forum](https://forum.pkp.sfu.ca/) for general OJS support
-
-## 📄 License
-
-This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Original OJS Team:** [Public Knowledge Project (PKP)](https://pkp.sfu.ca/) for the foundational Open Journal Systems
-- **WizdamID Development Team:** For PHP 7.4 compatibility enhancements and modern UI improvements
-- **Community Contributors:** For testing, feedback, and continuous improvement
-- **Academic Institutions:** For providing real-world testing environments
-
-## 📈 Project Statistics
-
-- **Downloads:** Ready for global distribution
-- **Compatibility:** 100% PHP 7.4+ compatible
-- **Warnings Eliminated:** 51 → 0 (100% success rate)
-- **Production Deployments:** Ready for enterprise use
+Dibangun di atas fondasi kokoh **Open Journal Systems (OJS) 2.4.8.5** namun telah direkayasa ulang sepenuhnya untuk berjalan mulus di lingkungan **PHP 8.4**, Scholarium menghadirkan pengalaman pengguna premium yang menyaingi platform komersial dengan biaya yang ramah bagi jurnal nasional dan institusi.
 
 ---
 
-## 🎉 Ready for Production!
+## 🚀 Mengapa Scholarium?
 
-**OJS 2.4.8.5 WizdamID Edition** is ready for production deployment on modern PHP hosting environments. Download now and experience zero-warning OJS installation!
+Banyak jurnal di Indonesia masih bertahan di OJS 2 karena kenyamanan antarmuka dan ekosistem plugin yang mapan. Namun, ketidakmampuan OJS 2 berjalan di server modern (PHP 7.4+) seringkali menjadi batu sandungan. **Scholarium** hadir sebagai solusi *drop-in replacement* yang revolusioner:
 
-**Made with ❤️ by the WizdamID Team**
+- **Modern Tech Stack:** Berjalan 100% tanpa error di PHP 8.4.
+- **Fintech-Ready:** Alur keuangan jurnal menjadi otomatis tanpa tambahan plugin pihak ketiga yang rumit.
+- **Familiar Workflow:** Editor, Reviewer, dan Author tetap menikmati antarmuka OJS 2 yang familier, namun dengan performa dan fitur OJS versi masa depan.
 
-*Empowering academic publishing with modern, reliable technology.*
+---
+
+## ✨ Fitur Unggulan
+
+### 💎 Inti Editorial Modern
+- **Dashboard Insight Modern:** Navigasi *highlight* artikel real-time, visualisasi progres editorial, dan pusat kendali yang dirancang untuk produktivitas Editor serta Reviewer.
+- **Zero-Warning Guarantee:** 51+ potensi *warning* dan *error* kompatibilitas PHP 8 telah dieliminasi total. Sistem berjalan senyap dan cepat.
+
+### 💰 Otomatisasi Finansial (Fintech-Ready Workflow)
+- **Integrasi Payment Gateway Native:** Dukungan langsung untuk **Xendit** dan **Midtrans**. Tidak perlu lagi instalasi plugin payment manual yang rentan konflik.
+- **Auto-Generated Invoice PDF:** Setiap kali *Article Processing Charge (APC)* dibayar, sistem otomatis membuat dan mengirimkan **Invoice PDF** ke email Author.
+- **Letter of Acceptance (LoA) Otomatis:** Proses administrasi penerimaan naskah menjadi sangat cepat; LoA langsung terbit setelah pembayaran terverifikasi.
+
+### 📜 Apresiasi Mitra Bestari
+- **Sertifikat Reviewer & Editor Otomatis:** Sistem akan otomatis menerbitkan sertifikat digital untuk reviewer dan editor yang telah menyelesaikan tugasnya, memperkuat rekognisi dan apresiasi kontributor jurnal.
+
+### ⚙️ Keunggulan Teknis
+- **PHP 8.4 Native Ready:** Memanfaatkan fitur-fitur terbaru PHP untuk keamanan dan kecepatan yang lebih baik (*JIT Compilation ready*).
+- **Enhanced Installation Wizard:** UI instalasi modern dan futuristik dengan *real-time monitoring* proses setup.
+
+---
+
+## 📋 Persyaratan Sistem
+
+| Komponen       | Spesifikasi Minimum                          |
+| :------------- | :------------------------------------------- |
+| **PHP**        | 7.4+ (Dioptimalkan untuk **PHP 8.4**)        |
+| **Database**   | MySQL 5.7+ / MariaDB 10.2+ / PostgreSQL 9.5+ |
+| **Web Server** | Apache 2.4+ / Nginx 1.14+                    |
+| **Memory**     | 256MB+ PHP Memory Limit                      |
+| **Storage**    | 500MB+ Ruang Disk Kosong                     |
+
+---
+
+## 🔧 Instalasi Cepat
+
+1.  **Clone Repositori**
+    ```bash
+    git clone https://github.com/mokesano/scholarium.git
+    cd scholarium
+    ```
+
+2.  **Atur Izin Direktori**
+    ```bash
+    chmod -R 755 .
+    chmod -R 777 cache/
+    chmod -R 777 files/
+    ```
+
+3.  **Jalankan Web Installer**
+    Buka browser dan akses:
+    ```
+    http://domain-anda.com/scholarium/install
+    ```
+    Ikuti langkah-langkah wizard instalasi yang interaktif.
+
+4.  **Konfigurasi Payment Gateway**
+    Setelah instalasi selesai, masuk sebagai *Journal Manager*, buka `Settings > Payments`, dan masukkan API Key Xendit atau Midtrans Anda.
+
+---
+
+## 📚 Dokumentasi & Dukungan
+
+Scholarium mempertahankan struktur direktori dan alur kerja OJS 2.4.8.5. Untuk panduan penggunaan harian, Anda dapat merujuk ke dokumentasi PKP.
+
+- **🐛 Bug & Isu Teknis**: Silakan buka tiket di [GitHub Issues](https://github.com/mokesano/scholarium/issues).
+- **💬 Diskusi Komunitas**: Bergabunglah di [GitHub Discussions](https://github.com/mokesano/scholarium/discussions) atau forum [OJS Community Indonesia](https://forum.pkp.sfu.ca/).
+
+---
+
+## 📜 Lisensi
+
+Proyek ini dilisensikan di bawah **GNU General Public License v3.0**. Anda bebas menggunakan, memodifikasi, dan mendistribusikannya sesuai dengan ketentuan lisensi. Lihat file [LICENSE](LICENSE) untuk detail lengkap.
+
+---
+
+## 🙏 Ucapan Terima Kasih
+
+Scholarium dapat terwujud berkat kontribusi luar biasa dari:
+- **[Public Knowledge Project (PKP)](https://pkp.sfu.ca/)** atas fondasi Open Journal Systems.
+- **Tim WizdamID** atas riset dan pengembangan kompatibilitas PHP 8 yang menjadi dasar sistem ini.
+- **Seluruh kontributor dan penguji** yang membantu memuluskan transisi OJS 2 ke masa depan.
+
+---
+
+<div align="center">
+  <b>Dibangun dengan ❤️ oleh Komunitas untuk Penerbitan Ilmiah Indonesia</b><br/>
+  <i>Scholarium — Where Manuscripts Meet Automation.</i>
+</div>
