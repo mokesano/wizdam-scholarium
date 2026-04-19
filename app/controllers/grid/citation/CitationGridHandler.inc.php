@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file controllers/grid/citation/CitationGridHandler.inc.php
+ *
+ * Copyright (c) 2013-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class CitationGridHandler
+ * @ingroup controllers_grid_citation
+ *
+ * @brief Handle OJS specific parts of citation grid requests.
+ */
+
+import('core.classes.controllers.grid.citation.PKPCitationGridHandler');
+
+// import validation classes
+import('app.classes.handler.validation.HandlerValidatorJournal');
+import('core.classes.handler.validation.HandlerValidatorRoles');
+
+class CitationGridHandler extends CitationGridHandler {
+	/**
+	 * Constructor
+	 */
+	function CitationGridHandler() {
+		parent::PKPCitationGridHandler();
+		$this->addRoleAssignment(
+				array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR),
+				array('fetchGrid', 'addCitation', 'editCitation', 'updateRawCitation',
+					'checkCitation', 'updateCitation', 'deleteCitation', 'exportCitations',
+					'fetchCitationFormErrorsAndComparison', 'sendAuthorQuery'));
+	}
+
+
+	//
+	// Implement template methods from PKPHandler
+	//
+	/**
+	 * @see Handler::authorize()
+	 */
+	function authorize(&$request, &$args, $roleAssignments) {
+		// Make sure the user can edit the submission in the request.
+		import('app.classes.security.authorization.OjsSubmissionAccessPolicy');
+		$this->addPolicy(new OjsSubmissionAccessPolicy($request, $args, $roleAssignments, 'assocId'));
+		return parent::authorize($request, $args, $roleAssignments);
+	}
+
+	/**
+	 * @see Handler::initialize()
+	 */
+	function initialize(&$request, $args) {
+		// Associate the citation editor with the authorized article.
+		$this->setAssocType(ASSOC_TYPE_ARTICLE);
+		$article =& $this->getAuthorizedContextObject(ASSOC_TYPE_ARTICLE);
+		assert(is_a($article, 'Article'));
+		$this->setAssocObject($article);
+
+		parent::initialize($request, $args);
+	}
+
+	//
+	// Override methods from PKPCitationGridHandler
+	//
+	/**
+	 * @see CitationGridHandler::exportCitations()
+	 */
+	function exportCitations($args, &$request) {
+		$dispatcher =& $this->getDispatcher();
+		$articleMetadataUrl = $dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'viewMetadata', $this->getAssocId());
+		$noCitationsFoundMessage = __("submission.citations.editor.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
+		return parent::exportCitations($args, $request, $noCitationsFoundMessage);
+	}
+}

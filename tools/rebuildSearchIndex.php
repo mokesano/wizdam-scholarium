@@ -15,7 +15,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('classes.search.ArticleSearchIndex');
+import('app.classes.search.ArticleSearchIndex');
 
 class rebuildSearchIndex extends CommandLineTool {
 

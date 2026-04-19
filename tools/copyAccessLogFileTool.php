@@ -17,7 +17,7 @@
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 // Bring in the file loader folder constants.
-import('lib.pkp.classes.task.FileLoader');
+import('core.classes.task.FileLoader');
 
 class CopyAccessLogFileTool extends CommandLineTool {
 

@@ -18,7 +18,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('lib.pkp.classes.cliTool.UpgradeTool');
+import('core.classes.cliTool.UpgradeTool');
 
 class OJSUpgradeTool extends UpgradeTool {
 	/**

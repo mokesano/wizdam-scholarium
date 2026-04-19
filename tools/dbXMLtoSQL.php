@@ -15,7 +15,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('lib.pkp.classes.cliTool.XmlToSqlTool');
+import('core.classes.cliTool.XmlToSqlTool');
 
 /** Default XML file to parse if none is specified */
 define('DATABASE_XML_FILE', 'dbscripts/xml/ojs_schema.xml');

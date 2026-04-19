@@ -78,7 +78,7 @@ class mergeUsers extends CommandLineTool {
 		}
 
 		// Both user IDs are valid. Merge the accounts.
-		import('classes.user.UserAction');
+		import('app.classes.user.UserAction');
 		UserAction::mergeUsers($oldUserId, $newUserId);
 
 		printf("Merge completed: '%s' merged into '%s'.\n",

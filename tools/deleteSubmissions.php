@@ -15,7 +15,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('classes.file.ArticleFileManager');
+import('app.classes.file.ArticleFileManager');
 
 class SubmissionDeletionTool extends CommandLineTool {
 

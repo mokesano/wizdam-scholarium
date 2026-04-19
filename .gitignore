@@ -1,212 +1,150 @@
-# =============================================================================
-# OJS (Open Journal Systems) - .gitignore
-# =============================================================================
+```
+# Build artifacts and compiled files
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.out
+dist/
+build/
+target/
 
-# -----------------------------------------------------------------------------
-# KONFIGURASI & DATABASE (SENSITIVE - JANGAN UPLOAD!)
-# -----------------------------------------------------------------------------
-config.inc.php
-config.*.php
-*.sql
-*.sql.gz
-*.sql.bz2
-dump*.sql
-backup*.sql
-database.sql
-
-# -----------------------------------------------------------------------------
-# FILE UPLOAD & USER DATA
-# -----------------------------------------------------------------------------
-public/*
-!public/.htaccess
-!public/index.php
-files/*
-!files/.htaccess
-files/articles/*
-files/issue_galleys/*
-files/journals/*
-files/public/*
-files/temp/*
-files/users/*
-
-# -----------------------------------------------------------------------------
-# CACHE & TEMPORARY FILES
-# -----------------------------------------------------------------------------
-cache/*
-!cache/.htaccess
-cache/t_compile/*
-cache/t_cache/*
-cache/_db/*
-templates_c/*
-*.tmp
-*.temp
-*.log
-logs/*
-
-# -----------------------------------------------------------------------------
-# SYSTEM & DEPENDENCIES
-# -----------------------------------------------------------------------------
-vendor/
+# Dependencies
 node_modules/
-composer.lock
-package-lock.json
-yarn.lock
+venv/
+.venv/
+.julia/
+zig-cache/
+.depdb/
 
-# -----------------------------------------------------------------------------
-# IDE & EDITOR
-# -----------------------------------------------------------------------------
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-Thumbs.db
-
-# -----------------------------------------------------------------------------
-# BACKUP FILES
-# -----------------------------------------------------------------------------
-*~
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
 *.bak
-*.backup
-*.old
-*.orig
+*.backup*
 
-# -----------------------------------------------------------------------------
-# ENVIRONMENT
-# -----------------------------------------------------------------------------
+# Environment variables and local configs
 .env
 .env.local
-.env.*.local
+.env.*
+.env~*
+.env.local~
 
-#-------------------------
-# Operating Specific Junk Files
-#-------------------------
-
-# OS X
+# OS generated files
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# OS X Thumbnails
-._*
-
-# Windows image file caches
 Thumbs.db
+*.DS_Store*
 ehthumbs.db
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# Linux
-*~
-
-# KDE directory preferences
+Icon?
 .directory
+.Spotlight-V100
+.Trashes
+VolumeIcon.icns
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+# Backup files
+*~
+*.bak
+*.save
+*.orig
+*.rej
 
-#-------------------------
-# Environment Files
-#-------------------------
-# These should never be under version control,
-# as it poses a security risk.
-.env
-.vagrant
-Vagrantfile
-/user_guide_src/venv/
-.python-version
-/user_guide_src/.python-version
+# Compressed archives
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 
-#-------------------------
-# Temporary Files
-#-------------------------
-/writable/cache/*
-!/writable/cache/index.html
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
 
-/writable/logs/*
-!/writable/logs/index.html
+# Python specific
+*.py[cod]
+*$py.class
+*.so
+.Python
+install_manifest.txt
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
 
-/writable/session/*
-!/writable/session/index.html
-
-/writable/uploads/*
-!/writable/uploads/index.html
-
-/writable/debugbar/*
-!/writable/debugbar/index.html
-
-/writable/**/*.db
-/writable/**/*.sqlite
-
-php_errors.log
-
-#-------------------------
-# User Guide Temp Files
-#-------------------------
-/user_guide_src/build/*
-
-#-------------------------
-# Test Files
-#-------------------------
-/tests/coverage*
-
-# Don't save phpunit under version control.
-/phpunit
-
-#-------------------------
-# Composer
-#-------------------------
+# PHP specific
 vendor/
 composer.lock
+*.phar
 
-#-------------------------
-# IDE / Development Files
-#-------------------------
-
-# Modules Testing
-_modules/*
-
-# phpenv local config
-.php-version
-
-# Jetbrains editors (PHPStorm, etc)
-.idea/
-*.iml
-
-# Netbeans
-/nbproject/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/nbactions.xml
-/nb-configuration.xml
-/.nb-gradle/
-
-# Sublime Text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
-*.sublime-project
-.phpintel
-/api/
-
-# Visual Studio Code
+# IDE and editor specific
 .vscode/
+.idea/
+*.swp
+*.swo
+*.swn
 
-/results/
-/phpunit.xml
+# Database
+*.db
+*.db3
+*.sqlite
+*.sqlite3
 
-/.php-cs-fixer.php
+# Local development and cache
+.cache/
+.temp/
+.tmp/
+local.properties
+.settings/
+
+# Testing
+.junit/
+.test-results/
+
+# Package managers
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.pnp.js
+
+# Sensitive files
+config/secrets.yml
+secrets.json
+creds.json
+*.key
+*.pem
+.id_rsa
+.id_rsa.pub
+
+# System files
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Legacy backup files
+*.final_backup_*
+*.pre_rollback_backup
+*.emergency_backup.*
+
+```
