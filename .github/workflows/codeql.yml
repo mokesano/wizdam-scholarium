@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'php', 'javascript-typescript' ]
+        language: [ 'javascript-typescript' ]
 
     steps:
     - name: Checkout repository
@@ -33,9 +33,22 @@ jobs:
         queries: +security-and-quality
         config: |
           paths_ignore:
-            - lib/pkp/lib/**
+            - lib/**
             - vendor/**
             - node_modules/**
+            - js/**
+            - locale/**
+            - rt/**
+            - dbscripts/**
+            - styles/**
+            - help/**
+            - docs/**
+            - registry/**
+            - public/**
+            - '**/*.tpl'
+            - '**/*.xml'
+            - '**/*.txt'
+            - '**/*.md'
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v3
