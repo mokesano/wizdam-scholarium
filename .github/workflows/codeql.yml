@@ -1,61 +1,55 @@
-name: "CodeQL"
+# Codacy Configuration File
+# https://docs.codacy.com/repositories-configure/codacy-configuration-file
 
-on:
-  push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
-  schedule:
-    - cron: '40 15 * * 6'
+# Exclude paths dari analisis
+exclude-paths:
+  # Exclude library pihak ketiga
+  - core/lib/tinymce
+  - app/plugins/generic/pdfJsViewer
+  - core/js/lib/plupload
+  - app/plugins/generic/lucene
+  - 'node_modules'
+  - 'vendor'
+  
+# Exclude pola file
+exclude-patterns:
+  # Exclude hidden files
+  - '(^|/)\\.'
+  
+  # Exclude build/distribution files
+  - '(^|/)build/'
+  - '(^|/)dist/'
+  
+  # Exclude common non-code files
+  - '\\.gif$'
+  - '\\.png$'
+  - '\\.jpg$'
+  - '\\.jpeg$'
+  - '\\.svg$'
+  - '\\.ico$'
+  - '\\.bcmap$'
+  - '\\.dtd$'
+  - '\\.tpl$'
+  - '\\.txt$'
+  - '\\.md$'
+  - '\\.lock$'
+  - '\\.log$'
 
-jobs:
-  analyze:
-    name: Analyze
-    runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
+# Konfigurasi tools
+tools:
+  pmd:
+    enabled: true
+    patterns:
+      - '**/*.java'
+  eslint:
+    enabled: true
+    patterns:
+      - '**/*.js'
+      - '**/*.jsx'
+  phpmd:
+    enabled: true
+    patterns:
+      - '**/*.php'
 
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'javascript-typescript' ]
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ matrix.language }}
-        queries: +security-and-quality
-        config: |
-          paths_ignore:
-            - lib/**
-            - vendor/**
-            - node_modules/**
-            - js/**
-            - locale/**
-            - rt/**
-            - dbscripts/**
-            - styles/**
-            - help/**
-            - docs/**
-            - registry/**
-            - public/**
-            - '**/*.tpl'
-            - '**/*.xml'
-            - '**/*.txt'
-            - '**/*.md'
-
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
-      env:
-        JAVA_OPTS: "-Xmx4g"
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      env:
-        JAVA_OPTS: "-Xmx4g"
+# Ignore low severity issues
+reject-value: LOW
