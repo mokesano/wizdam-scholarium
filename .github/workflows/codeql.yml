@@ -31,9 +31,18 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         queries: +security-and-quality
+        config: |
+          paths_ignore:
+            - lib/pkp/lib/**
+            - vendor/**
+            - node_modules/**
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v3
+      env:
+        JAVA_OPTS: "-Xmx4g"
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
+      env:
+        JAVA_OPTS: "-Xmx4g"
