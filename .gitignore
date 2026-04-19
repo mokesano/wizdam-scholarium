@@ -1,28 +1,13 @@
 ```
-# Compiled and binary files
-*.pyc
-__pycache__/
-*.o
-*.obj
-*.out
+# Dependency directories
+lib/pkp/lib/
 
-# Dependencies and packages
-vendor/
-node_modules/
-*.gem
-
-# Logs and temporary files
-*.log
+# Build artifacts and temp files
 *.tmp
 *.swp
-*.swo
+*.log
 
-# Environment and config files
-.env
-.env.local
-*.env.*
-
-# Editors and IDEs
+# IDE and editor files
 .vscode/
 .idea/
 
@@ -30,7 +15,16 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Archives and compressed files
+# Cache directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -53,191 +47,5 @@ Thumbs.db
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-
-# Build and distribution directories
-dist/
-build/
-target/
-.coverage
-coverage/
-htmlcov/
-
-# PHP specific
-*.php~
-*.php.bak
-*.php.swp
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Cache directories
-.cache/
-.cpan/
-.mypy_cache/
-.pytest_cache/
-
-# OS generated files
-*~
-.DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
-
-# Backup files
-*.bak
-*.old
-*.orig
-*.rej
-
-# Runtime specific
-*.so
-*.dll
-*.dylib
-*.a
-
-# Web server
-*.htaccess
-.htpasswd
-
-# Certificate
-*.crt
-*.pem
-*.key
-
-# Documentation
-*.pdf
-*.doc
-*.docx
-*.xls
-*.xlsx
-
-# Media
-*.mp3
-*.mp4
-*.avi
-*.mov
-*.wmv
-*.flv
-*.webm
-
-# Fonts
-*.ttf
-*.woff
-*.woff2
-*.eot
-
-# Icons
-*.ico
-*.icns
-
-# Localization
-*.po
-*.mo
-
-# Testing
-*.coverage
-.nyc_output/
-coverage/
-
-# CI/CD
-.github/
-.gitlab/
-
-# Docker
-.docker/
-docker-compose*.yml
-
-# Vagrant
-.vagrant/
-
-# Gradle
-.gradle/
-
-# Maven
-.mvn/
-
-# Ruby
-.bundle/
-Gemfile.lock
-
-# Python
-*.pyo
-*.pyd
-*.egg-info/
-.eggs/
-.tox/
-nox/
-.hypothesis/
-
-# Java
-*.class
-*.jar
-*.war
-*.ear
-hs_err_pid*
-
-# Node.js
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Go
-*.exe
-*.test
-*.prof
-
-# C#
-*.userprefs
-*.pidb
-*.suo
-*.user
-*.aps
-*.ncb
-*.obj/
-*.log
-*.ilk
-*.tlb
-*.tli
-*.tlh
-*.tmp
-*.rsp
-*.pgc
-*.pgd
-*.meta
-*.pidb.meta
-*.suo.meta
-*.user.meta
-*.unityproj.meta
-*.booproj.meta
-
-# Rust
-Cargo.lock
-
-# Elixir
-mix.lock
-
-# Elm
-elm-stuff/
-
-# Haskell
-*.o
-*.hi
-*.chi
-*.chs.h
-*.dyn_o
-*.dyn_hi
-
-# Perl
-*.fasl
-*.mo
-blib/
-*x.*
-pm_to_blib
-.lwpcookies
-Makefile
-MakeMaker-*
-
 
 ```

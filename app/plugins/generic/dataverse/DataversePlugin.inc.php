@@ -15,7 +15,7 @@
 import('core.classes.plugins.GenericPlugin');
 import('app.plugins.generic.dataverse.classes.DataversePackager');
 
-require('lib/pkp/lib/swordappv2/swordappclient.php');
+require('core/lib/swordappv2/swordappclient.php');
 
 // HTTP status codes
 define('DATAVERSE_PLUGIN_HTTP_STATUS_OK',         200);

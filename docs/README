@@ -206,7 +206,7 @@ interpreter installed on your server.
 
 Third-party Libraries
 ---------------------
-	* See lib/pkp/lib/libraries.txt for a list of third-party libraries
+	* See core/lib/libraries.txt for a list of third-party libraries
 	  used by OJS.
 
 	* OJS supports the legacy GeoLiteCite database to approximate geolocation

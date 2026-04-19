@@ -14,7 +14,7 @@
  */
 
 
-require_once('./lib/pkp/lib/pqp/classes/PhpQuickProfiler.php');
+require_once('./core/lib/pqp/classes/PhpQuickProfiler.php');
 
 class Profiler {
 
