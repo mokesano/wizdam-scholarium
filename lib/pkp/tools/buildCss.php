@@ -59,7 +59,7 @@ class buildCss extends CommandLineTool {
 	 */
 	function execute() {
 		// Load the LESS compiler class.
-		require_once('lib/pkp/lib/lessphp/lessc.inc.php');
+		require_once('core/lib/lessphp/lessc.inc.php');
 
 		// Flush if necessary
 		if ($this->force) unlink(APPLICATION_STYLES_DIR . '/' . APPLICATION_CSS_WRAPPER);

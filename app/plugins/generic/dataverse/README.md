@@ -35,11 +35,11 @@ included in OJS 2.4.3.
 
 From the OJS install directory, test the patch with: 
 
-`patch --dry-run -d lib/pkp/lib/swordappv2 < plugins/generic/dataverse/swordappv2.diff`
+`patch --dry-run -d core/lib/swordappv2 < plugins/generic/dataverse/swordappv2.diff`
 
 If the dry run indicates the patch will apply cleanly, run:
 
-`patch -d lib/pkp/lib/swordappv2 < plugins/generic/dataverse/swordappv2.diff`
+`patch -d core/lib/swordappv2 < plugins/generic/dataverse/swordappv2.diff`
 
 Enable and configure the plugin as described in the [guide](https://docs.google.com/document/d/1QgxtxMaWdSZ8gI3wHDkE5EfP4W3M2Za-4DhmX_x3pY0/edit?disco=AAAAAGd77n8#). 
 
