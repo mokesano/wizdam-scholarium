@@ -1,212 +1,918 @@
-# =============================================================================
-# OJS (Open Journal Systems) - .gitignore
-# =============================================================================
+# Dependencies
+node_modules/
 
-# -----------------------------------------------------------------------------
-# KONFIGURASI & DATABASE (SENSITIVE - JANGAN UPLOAD!)
-# -----------------------------------------------------------------------------
-config.inc.php
-config.*.php
-*.sql
-*.sql.gz
-*.sql.bz2
-dump*.sql
-backup*.sql
-database.sql
+# Logs and temp files
+*.log
+*.tmp
 
-# -----------------------------------------------------------------------------
-# FILE UPLOAD & USER DATA
-# -----------------------------------------------------------------------------
-public/*
-!public/.htaccess
-!public/index.php
-files/*
-!files/.htaccess
-files/articles/*
-files/issue_galleys/*
-files/journals/*
-files/public/*
-files/temp/*
-files/users/*
+# Environment
+.env
+.env.local
+*.env.*
 
-# -----------------------------------------------------------------------------
-# CACHE & TEMPORARY FILES
-# -----------------------------------------------------------------------------
-cache/*
-!cache/.htaccess
-cache/t_compile/*
-cache/t_cache/*
-cache/_db/*
-templates_c/*
+# Editors
+.vscode/
+
+# Coverage reports
+coverage/
+htmlcov/
+*.coverage
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.nox/
+.pytest_cache/
+.mypy_cache/
+
+# Build and distribution artifacts
+dist/
+build/
+*.egg
+*.egg-info/
+.eggs/
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+share/python-wheels/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Compressed files
+*.zip
+*.tar.gz
+*.gz
+*.rar
+*.7z
+*.tar
+*.bz2
+*.xz
+*.tgz
+*.Z
+*.lz
+*.lzo
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.zst
+
+# Testing
+.pytest_cache/
+.hypothesis/
+
+# Documentation
+docs/_build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+nyc_output/
+coverage/
+.nyc_output/
+.grunt
+bower_components/
+.jspm/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Debug
+db.log
+*.log
+
+# Platform files
+.DS_Store
+Thumbs.db
+
+# Temporary folders
+tmp/
+temp/
+
+# Configuration
+config/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+
+# Cache folders
+.cache/
+.cargo/
+.target/
+.gradle/
+.julia/
+zig-cache/
+zig-out/
+
+# Security
+secrets/
+credentials/
+private.key
+id_rsa
+id_dsa
+*.key
+*.pem
+*.crt
+*.cert
+
+# Database
+*.db
+*.db-journal
+
+# Lock files
+*.lock
+package-lock.json
+yarn.lock
+Pipfile.lock
+poetry.lock
+
+# CI/CD
+.github/
+.gitlab/
+
+# Backup files
+*~
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+
+# Generated files
+generated/
+.autotools/
+.autoreconf/
+autom4te.cache/
+config.status
+config.log
+Makefile.in
+aclocal.m4
+configure
+depcomp
+install-sh
+missing
+ylwrap
+
+# Mobile
+*.mobileprovision
+
+# Fonts
+*.ttf
+*.woff
+*.woff2
+*.eot
+
+# Images (common formats)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.webp
+*.tiff
+*.tif
+
+# Audio/Video
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.wav
+*.aac
+*.ogg
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+*.tgz
+*.tbz2
+*.txz
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.a
+*.lib
+*.out
+*.app
+*.bin
+*.jar
+*.war
+*.class
+*.elc
+*.pyc
+*.pyo
+*.pyd
+*.toc
+*.whl
+
+# Project-specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+
+# General temp files
 *.tmp
 *.temp
 *.log
-logs/*
+*.swp
+*.swo
+*~
 
-# -----------------------------------------------------------------------------
-# SYSTEM & DEPENDENCIES
-# -----------------------------------------------------------------------------
-vendor/
-node_modules/
-composer.lock
-package-lock.json
-yarn.lock
+# Configuration files
+.config/
+.settings/
+.metadata/
 
-# -----------------------------------------------------------------------------
-# IDE & EDITOR
-# -----------------------------------------------------------------------------
+# Local configuration overrides
+config/local.*
+config/environments/local.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE specific
 .vscode/
 .idea/
+.project
+.classpath
+.settings/
+*.tmproj
+nbproject/
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
+.vs/
+.vscodews/
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Thumbs.db:encryptable
 
-# -----------------------------------------------------------------------------
-# BACKUP FILES
-# -----------------------------------------------------------------------------
-*~
-*.bak
-*.backup
-*.old
-*.orig
+# Temporary files
+tmp/
+temp/
+tmp*/
+temp*/
 
-# -----------------------------------------------------------------------------
-# ENVIRONMENT
-# -----------------------------------------------------------------------------
+# Cache
+.cache/
+.caches/
+__pycache__/
+*.cache
+.cache-*
+
+# Lock files
+*.lock
+.lock-*
+
+# Build outputs
+dist/
+build/
+target/
+out/
+output/
+public/
+www/
+_site/
+_coverage/
+_nyc_output/
+
+# Package managers
+node_modules/
+bower_components/
+vendor/
+packages/
+lib/
+lib64/
+jspm_packages/
+web_modules/
+.fusebox/
+.nuxt/
+.next/
+.cache/
+.yarn/
+.pnp.*
+.pnp.js
+
+# Development tools
+.nyc_output/
+.coverage/
+.pytest_cache/
+.hypothesis/
+.tox/
+.coverage/
+nox/
+.dart_tool/
+.flutter-plugins
+.packages
+.pub-cache/
+.pub/
+build/
+ios/Pods/
+Pods/
+.swift-version
+.xcode.env
+.xcprivacy
+.xccheckout
+.xcsettings
+.xcworkspacedata
+.xcuserstate
+.xcscheme
+.xcschemes
+.xcstrings
+.xcdatamodel
+.xcdatamodeld
+.xcmappingmodel
+.xcassets
+.xcarchive
+.xcodeproj/
+xcuserdata/
+xcshareddata/
+xcdebug/
+xcsharedebug/
+xcshareddata/
+xcuserdatad/
+xcworkspace/
+xcshareddata/
+xcdebugdata/
+xcshareddebugdata/
+xcshareddata/
+xcuserdatad/
+xcworkspace/
+xcshareddata/
+xcdebugdata/
+xcshareddebugdata/
+
+# Testing
+coverage/
+.nyc_output/
+.pytest_cache/
+.hypothesis/
+.tox/
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.tox
+.cov
+coverage.lcov
+
+# Documentation
+docs/_build/
+.sphinx/
+docs/.buildinfo
+docs/_static/
+docs/_templates/
+docs/doctrees/
+docs/.doctrees/
+
+# Distribution / packaging
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.cover
+.coverage
+.nox/
+.pytest_cache/
+.hypothesis/
+.coverage.*
+.cache
+.pybuilder/
+target/
+.java-build-cache/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.coverage.*
+
+# Translations
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+.envs/
+venv/
+.venv/
 .env
 .env.local
-.env.*.local
+.env.dev
+.env.prod
+.env.test
+.env.staging
+.env.backup
+.env.save
+.env.example
+.env.sample
+.env.template
+.env.default
+.env.defaults
+.env.dist
+.env.prod.local
+.env.staging.local
+.env.test.local
+.env.docker
+.env.local.example
+.env.shared
+.env.shared.local
+.env.shared.dev
+.env.shared.prod
+.env.shared.test
+.env.shared.staging
+.env.dev.local
+.env.test.local
+.env.staging.local
+.env.prod.local
+.env.backup
+.env.save
+.env.example
+.env.sample
+.env.template
+.env.default
+.env.defaults
+.env.dist
+.env.prod.local
+.env.staging.local
+.env.test.local
+.env.docker
+.env.local.example
+.env.shared
+.env.shared.local
+.env.shared.dev
+.env.shared.prod
+.env.shared.test
+.env.shared.staging
+.env.dev.local
+.env.test.local
+.env.staging.local
+.env.prod.local
+.env.backup
+.env.save
+.env.example
+.env.sample
+.env.template
+.env.default
+.env.defaults
+.env.dist
+.env.prod.local
+.env.staging.local
+.env.test.local
+.env.docker
+.env.local.example
+.env.shared
+.env.shared.local
+.env.shared.dev
+.env.shared.prod
+.env.shared.test
+.env.shared.staging
+.env.dev.local
+.env.test.local
+.env.staging.local
+.env.prod.local
 
-#-------------------------
-# Operating Specific Junk Files
-#-------------------------
+# Flask
+instance/
+.webassets-cache
 
-# OS X
-.DS_Store
-.AppleDouble
-.LSOverride
+# Webpack
+webpack-stats.json
+.webpack/
+webpack.config.js
+webpack.config.babel.js
+webpack.config.dev.js
+webpack.config.prod.js
+webpack.config.test.js
+webpack.config.base.js
+webpack.config.common.js
+webpack.config.vendor.js
+webpack.config.dll.js
+webpack.config.dll.prod.js
+webpack.config.dll.dev.js
+webpack.config.dll.test.js
+webpack.config.dll.base.js
+webpack.config.dll.common.js
+webpack.config.dll.vendor.js
+webpack-bundle-analyzer-report.html
+webpack-bundle-analyzer-report.json
+bundle.js
+bundle.js.map
+*.bundle.js
+*.bundle.js.map
+*.chunk.js
+*.chunk.js.map
+*.hot-update.json
+*.hot-update.js
+*.hot-update.js.map
+*.hot-update.json
+*.hot-update.js
+*.hot-update.js.map
+*.hot-update.json
+*.hot-update.js
+*.hot-update.js.map
 
-# OS X Thumbnails
-._*
+# Browser sync
+.browser-sync/
+.browser-sync-client/
+.browser-sync-static/
+.browser-sync-tunnel/
+.browser-sync-ui/
+.browser-sync-opts.json
+.browser-sync-server.json
+.browser-sync-client.json
+.browser-sync.json
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+# ESLint
+eslint-cache/
+.eslintcache
+.eslintignore
+.eslintrc
+.eslintrc.js
+.eslintrc.yaml
+.eslintrc.yml
+.eslintrc.json
+.eslint/
+.eslint/
+.eslintignore
+.eslintrc
+.eslintrc.js
+.eslintrc.yaml
+.eslintrc.yml
+.eslintrc.json
+.eslint/
+.eslintignore
+.eslintrc
+.eslintrc.js
+.eslintrc.yaml
+.eslintrc.yml
+.eslintrc.json
+.eslint/
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Prettier
+prettier.config.js
+.prettierrc
+.prettierrc.json
+.prettierrc.yaml
+.prettierrc.yml
+.prettierignore
+prettier.config.js
+prettier.config.cjs
+prettier.config.mjs
+prettier.config.ts
+prettier.config.cts
+prettier.config.mts
+prettier.config.toml
+prettier.config.json
+prettier.config.yaml
+prettier.config.yml
+prettier.config.js
+prettier.config.cjs
+prettier.config.mjs
+prettier.config.ts
+prettier.config.cts
+prettier.config.mts
+prettier.config.toml
+prettier.config.json
+prettier.config.yaml
+prettier.config.yml
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Babel
+.babelrc
+.babelrc.js
+.babelrc.json
+babel.config.js
+babel.config.json
+babel.config.cjs
+babel.config.mjs
+.babel/
+.babelrc
+.babelrc.js
+.babelrc.json
+babel.config.js
+babel.config.json
+babel.config.cjs
+babel.config.mjs
 
-# Windows shortcuts
-*.lnk
+# TypeScript
+*.tsbuildinfo
+*.tsx
+*.jsx
+*.js.map
+*.ts.map
+*.jsx.map
+*.tsx.map
+dist/
+build/
+out/
+lib/
+node_modules/
+typings/
+typings.json
+tsconfig.json
+tsconfig.*.json
+tslint.json
+tslint.*.json
+.tscache/
+.tsbuildinfo
+*.tsbuildinfo
+*.tsx
+*.jsx
+*.js.map
+*.ts.map
+*.jsx.map
+*.tsx.map
 
-# Linux
-*~
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-#-------------------------
-# Environment Files
-#-------------------------
-# These should never be under version control,
-# as it poses a security risk.
-.env
-.vagrant
-Vagrantfile
-/user_guide_src/venv/
-.python-version
-/user_guide_src/.python-version
-
-#-------------------------
-# Temporary Files
-#-------------------------
-/writable/cache/*
-!/writable/cache/index.html
-
-/writable/logs/*
-!/writable/logs/index.html
-
-/writable/session/*
-!/writable/session/index.html
-
-/writable/uploads/*
-!/writable/uploads/index.html
-
-/writable/debugbar/*
-!/writable/debugbar/index.html
-
-/writable/**/*.db
-/writable/**/*.sqlite
-
-php_errors.log
-
-#-------------------------
-# User Guide Temp Files
-#-------------------------
-/user_guide_src/build/*
-
-#-------------------------
-# Test Files
-#-------------------------
-/tests/coverage*
-
-# Don't save phpunit under version control.
-/phpunit
-
-#-------------------------
-# Composer
-#-------------------------
-vendor/
-composer.lock
-
-#-------------------------
-# IDE / Development Files
-#-------------------------
-
-# Modules Testing
-_modules/*
-
-# phpenv local config
-.php-version
-
-# Jetbrains editors (PHPStorm, etc)
-.idea/
-*.iml
-
-# Netbeans
-/nbproject/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/nbactions.xml
-/nb-configuration.xml
-/.nb-gradle/
-
-# Sublime Text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
-*.sublime-project
-.phpintel
-/api/
-
-# Visual Studio Code
-.vscode/
-
-/results/
-/phpunit.xml
-
-/.php-cs-fixer.php
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.out
+*.o
+*.a
+*.obj
+*.lib......
