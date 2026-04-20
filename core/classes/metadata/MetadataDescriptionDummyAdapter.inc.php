@@ -40,7 +40,7 @@ class MetadataDescriptionDummyAdapter extends MetadataDataObjectAdapter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.classes.metadata.MetadataDescriptionDummyAdapter';
+		return 'core.library.classes.metadata.MetadataDescriptionDummyAdapter';
 	}
 
 

@@ -1,5 +1,5 @@
 {**
- * lib/pkp/templates/linkAction/linkAction.tpl
+ * templates/linkAction/linkAction.tpl
  *
  * Copyright (c) 2013-2019 Simon Fraser University
  * Copyright (c) 2000-2019 John Willinsky

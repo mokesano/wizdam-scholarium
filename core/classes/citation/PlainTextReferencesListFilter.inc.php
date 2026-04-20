@@ -41,7 +41,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
 	 */
 	function getCitationOutputFilterTypeDescriptions() {
 		return array(
-				'metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)',
+				'metadata::core.library.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)',
 				'primitive::string');
 	}
 
@@ -53,7 +53,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.classes.citation.PlainTextReferencesListFilter';
+		return 'core.library.classes.citation.PlainTextReferencesListFilter';
 	}
 
 

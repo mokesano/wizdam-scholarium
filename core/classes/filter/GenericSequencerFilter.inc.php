@@ -33,7 +33,7 @@ class GenericSequencerFilter extends CompositeFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.classes.filter.GenericSequencerFilter';
+		return 'core.library.classes.filter.GenericSequencerFilter';
 	}
 
 

@@ -43,7 +43,7 @@ class RegexRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilte
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationParser.regex.filter.RegexRawCitationNlm30CitationSchemaFilter';
+		return 'core.library.plugins.citationParser.regex.filter.RegexRawCitationNlm30CitationSchemaFilter';
 	}
 
 

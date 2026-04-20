@@ -35,7 +35,7 @@ class Nlm30CitationSchemaCitationAdapter extends MetadataDataObjectAdapter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationAdapter';
+		return 'core.library.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationAdapter';
 	}
 
 
@@ -136,7 +136,7 @@ class Nlm30CitationSchemaCitationAdapter extends MetadataDataObjectAdapter {
 									$assocType = ASSOC_TYPE_EDITOR;
 									break;
 							}
-							$nameDescription = new MetadataDescription('lib.pkp.plugins.metadata.nlm30.schema.Nlm30NameSchema', $assocType);
+							$nameDescription = new MetadataDescription('core.library.plugins.metadata.nlm30.schema.Nlm30NameSchema', $assocType);
 							$nameDescription->setStatements($name);
 							$names[$key] =& $nameDescription;
 							unset($nameDescription);

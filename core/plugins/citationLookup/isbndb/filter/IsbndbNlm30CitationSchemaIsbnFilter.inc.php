@@ -35,7 +35,7 @@ class IsbndbNlm30CitationSchemaIsbnFilter extends IsbndbNlm30CitationSchemaFilte
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationLookup.isbndb.filter.IsbndbNlm30CitationSchemaIsbnFilter';
+		return 'core.library.plugins.citationLookup.isbndb.filter.IsbndbNlm30CitationSchemaIsbnFilter';
 	}
 
 

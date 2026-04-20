@@ -38,7 +38,7 @@ class Nlm30NameSchemaPersonStringFilter extends Nlm30PersonStringFilter {
 		assert(is_string($delimiter));
 		$this->_delimiter = $delimiter;
 
-		$inputType = 'metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30NameSchema(*)';
+		$inputType = 'metadata::core.library.plugins.metadata.nlm30.schema.Nlm30NameSchema(*)';
 		$outputType = 'primitive::string';
 		if ($filterMode == PERSON_STRING_FILTER_MULTIPLE) $inputType .= '[]';
 

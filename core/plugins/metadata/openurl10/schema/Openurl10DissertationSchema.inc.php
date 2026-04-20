@@ -28,7 +28,7 @@ class Openurl10DissertationSchema extends Openurl10BaseSchema {
 	function Openurl10DissertationSchema() {
 		parent::Openurl10BaseSchema(
 			'openurl-1.0-dissertation',
-			'lib.pkp.plugins.metadata.openurl10.schema.Openurl10DissertationSchema'
+			'core.library.plugins.metadata.openurl10.schema.Openurl10DissertationSchema'
 		);
 
 		// Add meta-data properties that only appear in the OpenURL dissertation standard

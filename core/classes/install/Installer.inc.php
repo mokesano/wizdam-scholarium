@@ -29,7 +29,7 @@ import('core.classes.site.Version');
 import('core.classes.site.VersionDAO');
 import('core.classes.config.ConfigParser');
 
-require_once './core/lib/adodb/adodb-xmlschema.inc.php';
+require_once './core/library/adodb/adodb-xmlschema.inc.php';
 
 class Installer {
 
@@ -368,7 +368,7 @@ class Installer {
 				$fileName = $action['file'];
 				$this->log(sprintf('schema: %s', $action['file']));
 
-				require_once './core/lib/adodb/adodb-xmlschema.inc.php';
+				require_once './core/library/adodb/adodb-xmlschema.inc.php';
 				$schemaXMLParser = new adoSchema($this->dbconn);
 				$dict =& $schemaXMLParser->dict;
 				$dict->SetCharSet($this->dbconn->charSet);

@@ -39,7 +39,7 @@ class Mods34DescriptionXmlFilter extends PersistableFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.metadata.mods34.filter.Mods34DescriptionXmlFilter';
+		return 'core.library.plugins.metadata.mods34.filter.Mods34DescriptionXmlFilter';
 	}
 
 

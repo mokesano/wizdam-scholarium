@@ -40,7 +40,7 @@ class Nlm30CitationSchemaMlaFilter extends Nlm30CitationSchemaCitationOutputForm
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationOutput.mla.filter.Nlm30CitationSchemaMlaFilter';
+		return 'core.library.plugins.citationOutput.mla.filter.Nlm30CitationSchemaMlaFilter';
 	}
 
 

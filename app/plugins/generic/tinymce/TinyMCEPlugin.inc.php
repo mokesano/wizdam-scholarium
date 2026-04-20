@@ -17,7 +17,7 @@
 import('core.classes.plugins.GenericPlugin');
 
 // Define TinyMCE paths with unix-style separators for inclusion in browser.
-define('TINYMCE_INSTALL_PATH', 'core/lib/tinymce');
+define('TINYMCE_INSTALL_PATH', 'core/library/tinymce');
 define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . '/jscripts/tiny_mce');
 
 class TinyMCEPlugin extends GenericPlugin {

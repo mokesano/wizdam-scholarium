@@ -32,9 +32,9 @@ class SubmissionNlm30XmlFilter extends TemplateBasedReferencesListFilter {
 		parent::TemplateBasedReferencesListFilter($filterGroup);
 
 		// Set the output filter.
-		$this->setData('citationOutputFilterName', 'lib.pkp.plugins.metadata.nlm30.filter.Nlm30CitationSchemaNlm30XmlFilter');
+		$this->setData('citationOutputFilterName', 'core.library.plugins.metadata.nlm30.filter.Nlm30CitationSchemaNlm30XmlFilter');
 		// Set the metadata schema.
-		$this->setData('metadataSchemaName', 'lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
+		$this->setData('metadataSchemaName', 'core.library.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
 	}
 
 
@@ -47,7 +47,7 @@ class SubmissionNlm30XmlFilter extends TemplateBasedReferencesListFilter {
 	function getCitationOutputFilterTypeDescriptions() {
 		// FIXME: Add NLM citation-element + name validation (requires partial NLM DTD, XSD or RelaxNG), see #5648.
 		return array(
-				'metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)',
+				'metadata::core.library.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)',
 				'xml::*');
 	}
 
@@ -59,7 +59,7 @@ class SubmissionNlm30XmlFilter extends TemplateBasedReferencesListFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.metadata.nlm30.filter.PKPSubmissionNlm30XmlFilter';
+		return 'core.library.plugins.metadata.nlm30.filter.PKPSubmissionNlm30XmlFilter';
 	}
 
 

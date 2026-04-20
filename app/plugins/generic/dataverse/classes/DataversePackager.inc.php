@@ -12,7 +12,7 @@
  *
  * @brief Packages article metadata and suppfiles for deposit in Dataverse
  */
-require_once('core/lib/swordappv2/packager_atom_twostep.php');
+require_once('core/library/swordappv2/packager_atom_twostep.php');
 
 class DataversePackager extends PackagerAtomTwoStep {
 	

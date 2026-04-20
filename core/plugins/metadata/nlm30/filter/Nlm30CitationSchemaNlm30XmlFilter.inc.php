@@ -36,7 +36,7 @@ class Nlm30CitationSchemaNlm30XmlFilter extends Nlm30CitationSchemaCitationOutpu
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.metadata.nlm30.filter.Nlm30CitationSchemaNlm30XmlFilter';
+		return 'core.library.plugins.metadata.nlm30.filter.Nlm30CitationSchemaNlm30XmlFilter';
 	}
 
 

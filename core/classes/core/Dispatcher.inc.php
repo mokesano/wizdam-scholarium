@@ -168,11 +168,11 @@ class Dispatcher {
 	 */
 	function &_instantiateRouter($routerName, $shortcut) {
 		if (!isset($this->_routerInstances[$shortcut])) {
-			// Routers must belong to the classes.core or lib.pkp.classes.core package
+			// Routers must belong to the classes.core or core.library.classes.core package
 			// NB: This prevents code inclusion attacks.
 			$allowedRouterPackages = array(
 				'classes.core',
-				'lib.pkp.classes.core'
+				'core.library.classes.core'
 			);
 
 			// Instantiate the router

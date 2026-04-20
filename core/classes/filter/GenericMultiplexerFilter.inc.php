@@ -66,7 +66,7 @@ class GenericMultiplexerFilter extends CompositeFilter {
 	 * @see PersistentFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.classes.filter.GenericMultiplexerFilter';
+		return 'core.library.classes.filter.GenericMultiplexerFilter';
 	}
 
 

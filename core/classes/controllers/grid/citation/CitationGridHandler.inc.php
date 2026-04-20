@@ -227,7 +227,7 @@ class CitationGridHandler extends GridHandler {
 				foreach($exportFilterConfiguration as $selectListHeading => $outputType) {
 					// All filters that take a submission and one of the supported
 					// output types will be displayed.
-					$exportFilterObjects =& $filterDao->getObjectsByTypeDescription('class::lib.pkp.classes.submission.Submission', $outputType);
+					$exportFilterObjects =& $filterDao->getObjectsByTypeDescription('class::core.library.classes.submission.Submission', $outputType);
 
 					// Build the array for the template.
 					$exportFilters[$selectListHeading] = array();
@@ -566,7 +566,7 @@ class CitationGridHandler extends GridHandler {
 	function _getExportFilterConfiguration() {
 		return array(
 			'submission.citations.editor.export.pleaseSelectXmlFilter' => 'xml::%',
-			'submission.citations.editor.export.pleaseSelectPlaintextFilter' => 'class::lib.pkp.classes.citation.PlainTextReferencesList'
+			'submission.citations.editor.export.pleaseSelectPlaintextFilter' => 'class::core.library.classes.citation.PlainTextReferencesList'
 		);
 	}
 

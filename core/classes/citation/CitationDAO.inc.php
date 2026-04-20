@@ -654,7 +654,7 @@ class CitationDAO extends DAO {
 			$citationFilterNet = new GenericSequencerFilter(
 					PersistableFilter::tempGroup(
 							$filterGroup->getInputType(),
-							'class::lib.pkp.classes.citation.Citation'),
+							'class::core.library.classes.citation.Citation'),
 					'Citation Filter Network');
 			$citationFilterNet->addFilter($citationMultiplexer);
 			$citationFilterNet->addFilter($citationDemultiplexer);

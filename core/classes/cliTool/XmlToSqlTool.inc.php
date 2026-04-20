@@ -88,7 +88,7 @@ class XmlToSqlTool extends CommandLineTool {
 	 * See core/dtd/xmlSchema.dtd for the format of the XML files.
 	 */
 	function execute() {
-		require_once('./core/lib/adodb/adodb-xmlschema.inc.php');
+		require_once('./core/library/adodb/adodb-xmlschema.inc.php');
 
 		if (in_array($this->command, array('print', 'save'))) {
 			// Don't connect to actual database (so parser won't build upgrade XML)

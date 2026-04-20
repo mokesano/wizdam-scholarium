@@ -70,7 +70,7 @@ class PubmedNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationLookup.pubmed.filter.PubmedNlm30CitationSchemaFilter';
+		return 'core.library.plugins.citationLookup.pubmed.filter.PubmedNlm30CitationSchemaFilter';
 	}
 
 
@@ -282,7 +282,7 @@ class PubmedNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilter {
 				$metadata['person-group[@person-group-type="author"]'] = array();
 
 			// Instantiate an NLM name description
-			$authorDescription = new MetadataDescription('lib.pkp.plugins.metadata.nlm30.schema.Nlm30NameSchema', ASSOC_TYPE_AUTHOR);
+			$authorDescription = new MetadataDescription('core.library.plugins.metadata.nlm30.schema.Nlm30NameSchema', ASSOC_TYPE_AUTHOR);
 
 			// Surname
 			$lastNameNodes =& $authorNode->getElementsByTagName("LastName");

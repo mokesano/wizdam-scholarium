@@ -68,7 +68,7 @@ class WorldcatNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationLookup.worldcat.filter.WorldcatNlm30CitationSchemaFilter';
+		return 'core.library.plugins.citationLookup.worldcat.filter.WorldcatNlm30CitationSchemaFilter';
 	}
 
 

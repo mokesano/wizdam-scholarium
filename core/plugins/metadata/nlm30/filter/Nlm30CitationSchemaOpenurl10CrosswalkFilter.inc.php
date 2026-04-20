@@ -26,8 +26,8 @@ class Nlm30CitationSchemaOpenurl10CrosswalkFilter extends Nlm30Openurl10Crosswal
 	 */
 	function Nlm30CitationSchemaOpenurl10CrosswalkFilter() {
 		$this->setDisplayName('Crosswalk from NLM Citation to Open URL');
-		parent::Nlm30Openurl10CrosswalkFilter('lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema',
-				'lib.pkp.plugins.metadata.openurl10.schema.Openurl10BaseSchema');
+		parent::Nlm30Openurl10CrosswalkFilter('core.library.plugins.metadata.nlm30.schema.Nlm30CitationSchema',
+				'core.library.plugins.metadata.openurl10.schema.Openurl10BaseSchema');
 	}
 
 
@@ -50,15 +50,15 @@ class Nlm30CitationSchemaOpenurl10CrosswalkFilter extends Nlm30Openurl10Crosswal
 		switch($publicationType) {
 			case NLM30_PUBLICATION_TYPE_JOURNAL:
 			case NLM30_PUBLICATION_TYPE_CONFPROC:
-				$outputSchemaName = 'lib.pkp.plugins.metadata.openurl10.schema.Openurl10JournalSchema';
+				$outputSchemaName = 'core.library.plugins.metadata.openurl10.schema.Openurl10JournalSchema';
 				break;
 
 			case NLM30_PUBLICATION_TYPE_BOOK:
-				$outputSchemaName = 'lib.pkp.plugins.metadata.openurl10.schema.Openurl10BookSchema';
+				$outputSchemaName = 'core.library.plugins.metadata.openurl10.schema.Openurl10BookSchema';
 				break;
 
 			case NLM30_PUBLICATION_TYPE_THESIS:
-				$outputSchemaName = 'lib.pkp.plugins.metadata.openurl10.schema.Openurl10DissertationSchema';
+				$outputSchemaName = 'core.library.plugins.metadata.openurl10.schema.Openurl10DissertationSchema';
 				break;
 
 			default:

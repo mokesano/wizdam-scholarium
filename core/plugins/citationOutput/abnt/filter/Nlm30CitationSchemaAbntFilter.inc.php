@@ -45,7 +45,7 @@ class Nlm30CitationSchemaAbntFilter extends Nlm30CitationSchemaCitationOutputFor
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationOutput.abnt.filter.Nlm30CitationSchemaAbntFilter';
+		return 'core.library.plugins.citationOutput.abnt.filter.Nlm30CitationSchemaAbntFilter';
 	}
 
 

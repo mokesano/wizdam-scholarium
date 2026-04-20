@@ -40,7 +40,7 @@ class Nlm30CitationSchemaVancouverFilter extends Nlm30CitationSchemaCitationOutp
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationOutput.vancouver.filter.Nlm30CitationSchemaVancouverFilter';
+		return 'core.library.plugins.citationOutput.vancouver.filter.Nlm30CitationSchemaVancouverFilter';
 	}
 
 

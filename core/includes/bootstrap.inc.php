@@ -41,10 +41,10 @@ ini_set('include_path', '.'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/core'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/classes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/pages'
-	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/lib/adodb'
-	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/lib/phputf8'
-	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/lib/pqp/classes'
-	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/lib/smarty'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/library/adodb'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/library/phputf8'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/library/pqp/classes'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/core/library/smarty'
 	. ENV_SEPARATOR . ini_get('include_path')
 );
 

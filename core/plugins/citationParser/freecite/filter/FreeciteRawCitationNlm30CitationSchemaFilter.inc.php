@@ -41,7 +41,7 @@ class FreeciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationParser.freecite.filter.FreeciteRawCitationNlm30CitationSchemaFilter';
+		return 'core.library.plugins.citationParser.freecite.filter.FreeciteRawCitationNlm30CitationSchemaFilter';
 	}
 
 

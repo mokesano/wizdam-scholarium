@@ -110,7 +110,7 @@ class XSLTransformationFilter extends PersistableFilter {
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.classes.xslt.XSLTransformationFilter';
+		return 'core.library.classes.xslt.XSLTransformationFilter';
 	}
 
 

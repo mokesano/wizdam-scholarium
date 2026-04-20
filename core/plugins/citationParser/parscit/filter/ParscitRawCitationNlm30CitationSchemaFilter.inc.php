@@ -41,7 +41,7 @@ class ParscitRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFil
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationParser.parscit.filter.ParscitRawCitationNlm30CitationSchemaFilter';
+		return 'core.library.plugins.citationParser.parscit.filter.ParscitRawCitationNlm30CitationSchemaFilter';
 	}
 
 

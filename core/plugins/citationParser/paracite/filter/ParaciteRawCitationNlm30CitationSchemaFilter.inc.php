@@ -75,7 +75,7 @@ class ParaciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationParser.paracite.filter.ParaciteRawCitationNlm30CitationSchemaFilter';
+		return 'core.library.plugins.citationParser.paracite.filter.ParaciteRawCitationNlm30CitationSchemaFilter';
 	}
 
 
@@ -205,7 +205,7 @@ class ParaciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
 					}
 					unset($metadata['title']);
 				}
-				$openurl10SchemaName = 'lib.pkp.plugins.metadata.openurl10.schema.Openurl10BookSchema';
+				$openurl10SchemaName = 'core.library.plugins.metadata.openurl10.schema.Openurl10BookSchema';
 				$openurl10SchemaClass = 'Openurl10BookSchema';
 				break;
 
@@ -225,7 +225,7 @@ class ParaciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
 					}
 					unset($metadata['title']);
 				}
-				$openurl10SchemaName = 'lib.pkp.plugins.metadata.openurl10.schema.Openurl10JournalSchema';
+				$openurl10SchemaName = 'core.library.plugins.metadata.openurl10.schema.Openurl10JournalSchema';
 				$openurl10SchemaClass = 'Openurl10JournalSchema';
 				break;
 		}

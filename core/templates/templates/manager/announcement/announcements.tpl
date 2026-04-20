@@ -1,5 +1,5 @@
 {**
- * lib/pkp/templates/announcement/announcements.tpl
+ * templates/announcement/announcements.tpl
  *
  * Copyright (c) 2013-2019 Simon Fraser University
  * Copyright (c) 2000-2019 John Willinsky

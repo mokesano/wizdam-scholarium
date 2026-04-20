@@ -39,7 +39,7 @@ class PersonStringNlm30NameSchemaFilter extends Nlm30PersonStringFilter {
 		$this->_filterDegrees = $filterDegrees;
 
 		$inputType = 'primitive::string';
-		$outputType = 'metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30NameSchema(*)';
+		$outputType = 'metadata::core.library.plugins.metadata.nlm30.schema.Nlm30NameSchema(*)';
 		if ($filterMode == PERSON_STRING_FILTER_MULTIPLE) $outputType .= '[]';
 
 		parent::Nlm30PersonStringFilter($inputType, $outputType, $filterMode);
@@ -238,7 +238,7 @@ class PersonStringNlm30NameSchemaFilter extends Nlm30PersonStringFilter {
 		$personRegexPrefixedDoubleSurname = "(?P<prefix>(?:".$personRegex['prefix'].")?)(?P<surname>".$personRegex['double-surname'].")";
 
 		// Instantiate the target person description
-		$personDescription = new MetadataDescription('lib.pkp.plugins.metadata.nlm30.schema.Nlm30NameSchema', $this->_assocType);
+		$personDescription = new MetadataDescription('core.library.plugins.metadata.nlm30.schema.Nlm30NameSchema', $this->_assocType);
 
 		// Clean the person string
 		$personString = trim($personString);

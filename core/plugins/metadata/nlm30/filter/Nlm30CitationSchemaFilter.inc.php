@@ -367,7 +367,7 @@ class Nlm30CitationSchemaFilter extends PersistableFilter {
 	 */
 	function &getNlm30CitationDescriptionFromMetadataArray(&$metadataArray) {
 		// Create a new citation description
-		$citationDescription = new MetadataDescription('lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema', ASSOC_TYPE_CITATION);
+		$citationDescription = new MetadataDescription('core.library.plugins.metadata.nlm30.schema.Nlm30CitationSchema', ASSOC_TYPE_CITATION);
 
 		// Add the meta-data to the description
 		$metadataArray = arrayClean($metadataArray);

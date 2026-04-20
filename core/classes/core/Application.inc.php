@@ -169,7 +169,7 @@ class Application {
 			$dispatcher->setApplication(Application::getApplication());
 
 			// Inject router configuration
-			$dispatcher->addRouterName('lib.pkp.classes.core.PKPComponentRouter', ROUTE_COMPONENT);
+			$dispatcher->addRouterName('core.library.classes.core.PKPComponentRouter', ROUTE_COMPONENT);
 			$dispatcher->addRouterName('classes.core.PageRouter', ROUTE_PAGE);
 		}
 
@@ -306,42 +306,42 @@ class Application {
 	 */
 	function getDAOMap() {
 		return array(
-			'AccessKeyDAO' => 'lib.pkp.classes.security.AccessKeyDAO',
-			'AuthSourceDAO' => 'lib.pkp.classes.security.AuthSourceDAO',
-			'CaptchaDAO' => 'lib.pkp.classes.captcha.CaptchaDAO',
-			'CitationDAO' => 'lib.pkp.classes.citation.CitationDAO',
-			'ControlledVocabDAO' => 'lib.pkp.classes.controlledVocab.ControlledVocabDAO',
-			'ControlledVocabEntryDAO' => 'lib.pkp.classes.controlledVocab.ControlledVocabEntryDAO',
-			'CountryDAO' => 'lib.pkp.classes.i18n.CountryDAO',
-			'CurrencyDAO' => 'lib.pkp.classes.currency.CurrencyDAO',
-			'DataObjectTombstoneDAO' => 'lib.pkp.classes.tombstone.DataObjectTombstoneDAO',
-			'DataObjectTombstoneSettingsDAO' => 'lib.pkp.classes.tombstone.DataObjectTombstoneSettingsDAO',
-			'FilterDAO' => 'lib.pkp.classes.filter.FilterDAO',
-			'FilterGroupDAO' => 'lib.pkp.classes.filter.FilterGroupDAO',
-			'GroupDAO' => 'lib.pkp.classes.group.GroupDAO',
-			'GroupMembershipDAO' => 'lib.pkp.classes.group.GroupMembershipDAO',
-			'HelpTocDAO' => 'lib.pkp.classes.help.HelpTocDAO',
-			'HelpTopicDAO' => 'lib.pkp.classes.help.HelpTopicDAO',
-			'InterestDAO' => 'lib.pkp.classes.user.InterestDAO',
-			'InterestEntryDAO' => 'lib.pkp.classes.user.InterestEntryDAO',
-			'LanguageDAO' => 'lib.pkp.classes.language.LanguageDAO',
-			'MetadataDescriptionDAO' => 'lib.pkp.classes.metadata.MetadataDescriptionDAO',
-			'NotificationDAO' => 'lib.pkp.classes.notification.NotificationDAO',
-			'NotificationMailListDAO' => 'lib.pkp.classes.notification.NotificationMailListDAO',
-			'NotificationSettingsDAO' => 'lib.pkp.classes.notification.NotificationSettingsDAO',
-			'NotificationSubscriptionSettingsDAO' => 'lib.pkp.classes.notification.NotificationSubscriptionSettingsDAO',
-			'ONIXCodelistItemDAO' => 'lib.pkp.classes.codelist.ONIXCodelistItemDAO',
-			'ProcessDAO' => 'lib.pkp.classes.process.ProcessDAO',
-			'QualifierDAO' => 'lib.pkp.classes.codelist.QualifierDAO',
-			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
-			'SessionDAO' => 'lib.pkp.classes.session.SessionDAO',
-			'SiteDAO' => 'lib.pkp.classes.site.SiteDAO',
-			'SiteSettingsDAO' => 'lib.pkp.classes.site.SiteSettingsDAO',
-			'SubjectDAO' => 'lib.pkp.classes.codelist.SubjectDAO',
-			'TimeZoneDAO' => 'lib.pkp.classes.i18n.TimeZoneDAO',
-			'TemporaryFileDAO' => 'lib.pkp.classes.file.TemporaryFileDAO',
-			'VersionDAO' => 'lib.pkp.classes.site.VersionDAO',
-			'XMLDAO' => 'lib.pkp.classes.db.XMLDAO'
+			'AccessKeyDAO' => 'core.library.classes.security.AccessKeyDAO',
+			'AuthSourceDAO' => 'core.library.classes.security.AuthSourceDAO',
+			'CaptchaDAO' => 'core.library.classes.captcha.CaptchaDAO',
+			'CitationDAO' => 'core.library.classes.citation.CitationDAO',
+			'ControlledVocabDAO' => 'core.library.classes.controlledVocab.ControlledVocabDAO',
+			'ControlledVocabEntryDAO' => 'core.library.classes.controlledVocab.ControlledVocabEntryDAO',
+			'CountryDAO' => 'core.library.classes.i18n.CountryDAO',
+			'CurrencyDAO' => 'core.library.classes.currency.CurrencyDAO',
+			'DataObjectTombstoneDAO' => 'core.library.classes.tombstone.DataObjectTombstoneDAO',
+			'DataObjectTombstoneSettingsDAO' => 'core.library.classes.tombstone.DataObjectTombstoneSettingsDAO',
+			'FilterDAO' => 'core.library.classes.filter.FilterDAO',
+			'FilterGroupDAO' => 'core.library.classes.filter.FilterGroupDAO',
+			'GroupDAO' => 'core.library.classes.group.GroupDAO',
+			'GroupMembershipDAO' => 'core.library.classes.group.GroupMembershipDAO',
+			'HelpTocDAO' => 'core.library.classes.help.HelpTocDAO',
+			'HelpTopicDAO' => 'core.library.classes.help.HelpTopicDAO',
+			'InterestDAO' => 'core.library.classes.user.InterestDAO',
+			'InterestEntryDAO' => 'core.library.classes.user.InterestEntryDAO',
+			'LanguageDAO' => 'core.library.classes.language.LanguageDAO',
+			'MetadataDescriptionDAO' => 'core.library.classes.metadata.MetadataDescriptionDAO',
+			'NotificationDAO' => 'core.library.classes.notification.NotificationDAO',
+			'NotificationMailListDAO' => 'core.library.classes.notification.NotificationMailListDAO',
+			'NotificationSettingsDAO' => 'core.library.classes.notification.NotificationSettingsDAO',
+			'NotificationSubscriptionSettingsDAO' => 'core.library.classes.notification.NotificationSubscriptionSettingsDAO',
+			'ONIXCodelistItemDAO' => 'core.library.classes.codelist.ONIXCodelistItemDAO',
+			'ProcessDAO' => 'core.library.classes.process.ProcessDAO',
+			'QualifierDAO' => 'core.library.classes.codelist.QualifierDAO',
+			'ScheduledTaskDAO' => 'core.library.classes.scheduledTask.ScheduledTaskDAO',
+			'SessionDAO' => 'core.library.classes.session.SessionDAO',
+			'SiteDAO' => 'core.library.classes.site.SiteDAO',
+			'SiteSettingsDAO' => 'core.library.classes.site.SiteSettingsDAO',
+			'SubjectDAO' => 'core.library.classes.codelist.SubjectDAO',
+			'TimeZoneDAO' => 'core.library.classes.i18n.TimeZoneDAO',
+			'TemporaryFileDAO' => 'core.library.classes.file.TemporaryFileDAO',
+			'VersionDAO' => 'core.library.classes.site.VersionDAO',
+			'XMLDAO' => 'core.library.classes.db.XMLDAO'
 		);
 	}
 

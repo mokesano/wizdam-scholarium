@@ -38,7 +38,7 @@ class Nlm30CitationSchemaApaFilter extends Nlm30CitationSchemaCitationOutputForm
 	 * @see PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.citationOutput.apa.filter.Nlm30CitationSchemaApaFilter';
+		return 'core.library.plugins.citationOutput.apa.filter.Nlm30CitationSchemaApaFilter';
 	}
 
 

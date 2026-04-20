@@ -13,9 +13,9 @@
  * @brief Class providing a SWORD deposit wrapper for OJS articles
  */
 
-require_once('./core/lib/swordappv2/swordappclient.php');
-require_once('./core/lib/swordappv2/swordappentry.php');
-require_once('./core/lib/swordappv2/packager_mets_swap.php');
+require_once('./core/library/swordappv2/swordappclient.php');
+require_once('./core/library/swordappv2/swordappentry.php');
+require_once('./core/library/swordappv2/packager_mets_swap.php');
 
 class AppSwordDeposit {
 	/** @var $package SWORD deposit METS package */

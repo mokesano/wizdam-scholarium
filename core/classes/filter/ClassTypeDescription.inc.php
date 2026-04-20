@@ -11,7 +11,7 @@
  *
  * @brief A type description that validates objects by class type.
  *
- * Example type identifier: 'class::lib.pkp.classes.submission.Submission'
+ * Example type identifier: 'class::core.library.classes.submission.Submission'
  */
 
 import('core.classes.filter.TypeDescription');

@@ -104,11 +104,11 @@ class TypeDescriptionFactory {
 	 */
 	function _namespaceMap($namespace) {
 		static $namespaceMap = array(
-			TYPE_DESCRIPTION_NAMESPACE_PRIMITIVE => 'lib.pkp.classes.filter.PrimitiveTypeDescription',
-			TYPE_DESCRIPTION_NAMESPACE_CLASS => 'lib.pkp.classes.filter.ClassTypeDescription',
-			TYPE_DESCRIPTION_NAMESPACE_METADATA => 'lib.pkp.classes.metadata.MetadataTypeDescription',
-			TYPE_DESCRIPTION_NAMESPACE_XML => 'lib.pkp.classes.xslt.XMLTypeDescription',
-			TYPE_DESCRIPTION_NAMESPACE_VALIDATOR => 'lib.pkp.classes.validation.ValidatorTypeDescription'
+			TYPE_DESCRIPTION_NAMESPACE_PRIMITIVE => 'core.library.classes.filter.PrimitiveTypeDescription',
+			TYPE_DESCRIPTION_NAMESPACE_CLASS => 'core.library.classes.filter.ClassTypeDescription',
+			TYPE_DESCRIPTION_NAMESPACE_METADATA => 'core.library.classes.metadata.MetadataTypeDescription',
+			TYPE_DESCRIPTION_NAMESPACE_XML => 'core.library.classes.xslt.XMLTypeDescription',
+			TYPE_DESCRIPTION_NAMESPACE_VALIDATOR => 'core.library.classes.validation.ValidatorTypeDescription'
 		);
 		if (!isset($namespaceMap[$namespace])) return null;
 		return $namespaceMap[$namespace];
