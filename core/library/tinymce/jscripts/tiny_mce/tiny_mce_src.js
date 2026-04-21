@@ -1613,7 +1613,7 @@ tinymce.html.Styles = function(settings, schema) {
 								str = decode(str);
 
 								// Force strings into single quote format
-								return "'" + str.replace(/\'/g, "\\'") + "'";
+								return "'" + str.replace(/\\/g, "\\\\").replace(/\'/g, "\\'") + "'";
 							}
 
 							url = decode(url || url2 || url3);
@@ -1623,7 +1623,7 @@ tinymce.html.Styles = function(settings, schema) {
 								url = urlConverter.call(urlConverterScope, url, 'style');
 
 							// Output new URL format
-							return "url('" + url.replace(/\'/g, "\\'") + "')";
+							return "url('" + url.replace(/\\/g, "\\\\").replace(/\'/g, "\\'") + "')";
 						});
 
 						styles[name] = isEncoded ? decode(value, true) : value;
