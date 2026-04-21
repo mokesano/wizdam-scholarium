@@ -84,7 +84,7 @@
 			if (A && A.jquery) {
 				// already a jQuery object
 			} else if (A && A.nodeType === 1) {
-				A = $(A);
+				A = $([A]);
 			} else {
 				throw new Error("splitter: option 'A' must be a jQuery object or DOM element");
 			}
@@ -92,7 +92,7 @@
 			if (B && B.jquery) {
 				// already a jQuery object
 			} else if (B && B.nodeType === 1) {
-				B = $(B);
+				B = $([B]);
 			} else {
 				throw new Error("splitter: option 'B' must be a jQuery object or DOM element");
 			}
