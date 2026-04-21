@@ -38,9 +38,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # DITAMBAHKAN: Langkah krusial untuk menghemat RAM.
-      # Menghapus sementara folder library pihak ketiga agar tidak ikut di-scan oleh Codacy.
-      # Ini mengurangi beban komputasi secara masif.
       - name: Free up RAM (Remove third-party libraries before scan)
         run: rm -rf vendor/ node_modules/ cache/
 
@@ -50,8 +47,6 @@ jobs:
         id: codacy_scan
         continue-on-error: true
         env:
-          # DITAMBAHKAN: Membatasi penggunaan RAM maksimal 3 GB untuk inti program Codacy 
-          # agar runner Ubuntu tidak kehabisan memori (OOM) dan crash.
           CODACY_JAVA_OPTS: "-Xmx3g"
         with:
           # Check https://github.com/codacy/codacy-analysis-cli#project-token to get your project token from your Codacy repository
@@ -68,7 +63,8 @@ jobs:
 
       # Upload the SARIF file generated in the previous step
       - name: Upload SARIF results file
-        uses: github/codeql-action/upload-sarif@v3
-        if: steps.codacy_scan.outcome == 'success' || hashFiles('results.sarif') != ''
+        uses: github/codeql-action/upload-sarif@v4
+        continue-on-error: true
+        if: always() && hashFiles('results.sarif') != ''
         with:
           sarif_file: results.sarif
