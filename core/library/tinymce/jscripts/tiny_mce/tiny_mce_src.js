@@ -1613,7 +1613,7 @@ tinymce.html.Styles = function(settings, schema) {
 								str = decode(str);
 
 								// Force strings into single quote format
-								return "'" + str.replace(/\'/g, "\\'") + "'";
+								return "'" + str.replace(/\\/g, "\\\\").replace(/\'/g, "\\'") + "'";
 							}
 
 							url = decode(url || url2 || url3);
@@ -1623,7 +1623,7 @@ tinymce.html.Styles = function(settings, schema) {
 								url = urlConverter.call(urlConverterScope, url, 'style');
 
 							// Output new URL format
-							return "url('" + url.replace(/\'/g, "\\'") + "')";
+							return "url('" + url.replace(/\\/g, "\\\\").replace(/\'/g, "\\'") + "')";
 						});
 
 						styles[name] = isEncoded ? decode(value, true) : value;
@@ -2262,15 +2262,15 @@ tinymce.html.Styles = function(settings, schema) {
 
 			// Precompile RegExps and map objects
 			tokenRegExp = new RegExp('<(?:' +
-				'(?:!--([\\w\\W]*?)-->)|' + // Comment
+				'(?:!--([\\w\\W]*?)--(?:!?)>)|' + // Comment
 				'(?:!\\[CDATA\\[([\\w\\W]*?)\\]\\]>)|' + // CDATA
 				'(?:!DOCTYPE([\\w\\W]*?)>)|' + // DOCTYPE
 				'(?:\\?([^\\s\\/<>]+) ?([\\w\\W]*?)[?/]>)|' + // PI
 				'(?:\\/([^>]+)>)|' + // End element
-				'(?:([^\\s\\/<>]+)((?:\\s+[^"\'>]+(?:(?:"[^"]*")|(?:\'[^\']*\')|[^>]*))*|\\/)>)' + // Start element
+				'(?:([^\\s\\/<>]+)((?:\\s+[^<>]*?)?\\s*|\\/)>)' + // Start element
 			')', 'g');
 
-			attrRegExp = /([\w:\-]+)(?:\s*=\s*(?:(?:\"((?:\\.|[^\"])*)\")|(?:\'((?:\\.|[^\'])*)\')|([^>\s]+)))?/g;
+			attrRegExp = /([\w:\-]+)(?:\s*=\s*(?:(?:\"((?:\\.|[^"\\])*)\")|(?:\'((?:\\.|[^'\\])*)\')|([^>\s]+)))?/g;
 			specialElements = {
 				'script' : /<\/script[^>]*>/gi,
 				'style' : /<\/style[^>]*>/gi,
@@ -8467,7 +8467,7 @@ window.tinymce.dom.Sizzle = Sizzle;
 				return value.replace(/(<!--\[CDATA\[|\]\]-->)/g, '\n')
 						.replace(/^[\r\n]*|[\r\n]*$/g, '')
 						.replace(/^\s*((<!--)?(\s*\/\/)?\s*<!\[CDATA\[|(<!--\s*)?\/\*\s*<!\[CDATA\[\s*\*\/|(\/\/)?\s*<!--|\/\*\s*<!--\s*\*\/)\s*[\r\n]*/gi, '')
-						.replace(/\s*(\/\*\s*\]\]>\s*\*\/(-->)?|\s*\/\/\s*\]\]>(-->)?|\/\/\s*(-->)?|\]\]>|\/\*\s*-->\s*\*\/|\s*-->\s*)\s*$/g, '');
+						.replace(/\s*(\/\*\s*\]\]>\s*\*\/(--(?:!?)>)?|\s*\/\/\s*\]\]>(--(?:!?)>)?|\/\/\s*(--(?:!?)>)?|\]\]>|\/\*\s*--(?:!?)>\s*\*\/|\s*--(?:!?)>\s*)\s*$/g, '');
 			};
 
 			while (i--) {

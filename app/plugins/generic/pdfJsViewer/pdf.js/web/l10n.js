@@ -30,7 +30,7 @@
 'use strict';
 
 document.webL10n = (function(window, document, undefined) {
-  var gL10nData = {};
+  var gL10nData = Object.create(null);
   var gTextData = '';
   var gTextProp = 'textContent';
   var gLanguage = '';
@@ -253,8 +253,12 @@ document.webL10n = (function(window, document, undefined) {
           id = key;
           prop = gTextProp;
         }
+        if (id === '__proto__' || id === 'constructor' || id === 'prototype' ||
+            prop === '__proto__' || prop === 'constructor' || prop === 'prototype') {
+          continue;
+        }
         if (!gL10nData[id]) {
-          gL10nData[id] = {};
+          gL10nData[id] = Object.create(null);
         }
         gL10nData[id][prop] = data[key];
       }
@@ -282,7 +286,16 @@ document.webL10n = (function(window, document, undefined) {
       var dict = getL10nDictionary();
       if (dict && dict.locales && dict.default_locale) {
         console.log('using the embedded JSON directory, early way out');
-        gL10nData = dict.locales[lang] || dict.locales[dict.default_locale];
+        var localeData = dict.locales[lang] || dict.locales[dict.default_locale] || {};
+        gL10nData = Object.create(null);
+        for (var localeKey in localeData) {
+          if (!Object.prototype.hasOwnProperty.call(localeData, localeKey) ||
+              localeKey === '__proto__' || localeKey === 'constructor' ||
+              localeKey === 'prototype') {
+            continue;
+          }
+          gL10nData[localeKey] = localeData[localeKey];
+        }
         callback();
       } else {
         console.log('no resource to load, early way out');

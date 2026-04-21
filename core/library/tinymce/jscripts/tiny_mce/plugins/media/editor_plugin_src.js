@@ -63,6 +63,7 @@
 			self.url = url;
 
 			// Parse media types into a lookup table
+			// NOTE: keep all dynamic regex fragments escaped (including URLs with dots).
 			scriptRegExp = '';
 			for (i = 0; i < mediaTypes.length; i++) {
 				name = mediaTypes[i][0];
