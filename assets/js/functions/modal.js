@@ -23,7 +23,7 @@ function modal(url, actType, actOnId, localizedButtons, callingElement, dialogTi
 		var okButton = localizedButtons[0];
 		var cancelButton = localizedButtons[1];
 		var d = new Date();
-		var UID = Math.ceil(1000 * Math.random());
+		var UID = window.crypto.getRandomValues(new Uint32Array(1))[0];
 
 		// Open the modal when the even is triggered on the calling element.
 		$(callingElement).die('click').live('click', function() {
