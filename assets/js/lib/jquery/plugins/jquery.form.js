@@ -320,8 +320,9 @@ $.fn.ajaxSubmit = function(options) {
 							xhr.responseText = pre.innerHTML;
 					}
 				}
-				else if (opts.dataType == 'xml' && !xhr.responseXML && xhr.responseText != null) {
-					xhr.responseXML = toXml(xhr.responseText);
+				else if (opts.dataType == 'xml' && !xhr.responseXML) {
+					// Security: avoid reparsing DOM-derived text as XML markup.
+					// Keep responseXML null if no XML document is available.
 				}
 				data = $.httpData(xhr, opts.dataType);
 			}
