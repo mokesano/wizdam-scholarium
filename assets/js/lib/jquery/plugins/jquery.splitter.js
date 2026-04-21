@@ -78,6 +78,24 @@
 			var mychilds = $(">*", splitter[0]);
 			var A = args.A; // left/top frame
 			var B = args.B; // right/bottom frame
+
+			// Only allow jQuery objects or DOM elements for pane references.
+			// Reject string inputs to avoid selector/HTML interpretation.
+			if (A && A.jquery) {
+				// already a jQuery object
+			} else if (A && A.nodeType === 1) {
+				A = $([A]);
+			} else {
+				throw new Error("splitter: option 'A' must be a jQuery object or DOM element");
+			}
+
+			if (B && B.jquery) {
+				// already a jQuery object
+			} else if (B && B.nodeType === 1) {
+				B = $([B]);
+			} else {
+				throw new Error("splitter: option 'B' must be a jQuery object or DOM element");
+			}
 			
 			// Reduce the splitter to an integer size to avoid
 			// float problems with a non-integer width property.
