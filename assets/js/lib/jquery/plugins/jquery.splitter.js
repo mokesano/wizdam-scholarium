@@ -102,8 +102,9 @@
 			}
 
 			// Use normalized local references after validation.
-			var paneA = $(aElem);
-			var paneB = $(bElem);
+			// Avoid passing option-derived values into jQuery constructor.
+			var paneA = mychilds.eq(mychilds.index(aElem));
+			var paneB = mychilds.eq(mychilds.index(bElem));
 			
 			// Reduce the splitter to an integer size to avoid
 			// float problems with a non-integer width property.
