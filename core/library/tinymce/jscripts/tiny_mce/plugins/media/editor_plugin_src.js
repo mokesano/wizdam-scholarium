@@ -112,7 +112,7 @@
 				}
 			});
 
-			scriptRegExp = new RegExp('write(' + scriptRegExp + ')\\(([^)]+)\\)');
+			scriptRegExp = new RegExp('write(' + escapeRegExp(scriptRegExp) + ')\\(([^)]+)\\)');
 			self.lookup = lookup;
 
 			ed.onPreInit.add(function() {
